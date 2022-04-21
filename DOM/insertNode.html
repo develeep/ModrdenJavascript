@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li id="id1">1</li>
+    <li id="id2">2</li>
+    <li id="id3">3</li>
+  </ul>
+  <script>
+    const append = document.createElement('li');
+    const prepend = document.createElement('li');
+    const before = document.createElement('p');
+    const after = document.createElement('p');
+    const replaceWith = document.createElement('li');
+    append.innerHTML = "append"
+    prepend.innerHTML = "prepend"
+    before.innerHTML = "before"
+    after.innerHTML = "after"
+    replaceWith.innerHTML = "replace"
+    const ul = document.querySelector('ul')
+    const li = document.querySelector("#id2")
+    ul.append(append)
+    ul.prepend(prepend)
+    ul.before(before)
+    ul.after(after)
+    li.replaceWith(replaceWith);
+  </script>
+</body>
+</html>
