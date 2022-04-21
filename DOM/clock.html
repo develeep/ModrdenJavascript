@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="watch">
+    <span class="hour">hh</span>:<span class="min">mm</span>:<span class="sec">ss</span>
+  </div>
+  <script>
+    const clock = function(){
+      const watch = document.querySelector('#watch');
+      const date = new Date(); //현재 날자
+      const hour = date.getHours(); //현재 날자의 시간 가져오기
+      watch.querySelector('.hour').textContent = hour //hour부분에 시간 표시
+      const min = date.getMinutes(); //현재 날자의 분 가져오기
+      watch.querySelector('.min').textContent = min //min 부분에 분 표시
+      const sec = date.getSeconds(); //현재 날자의 초 가져오기
+      watch.querySelector('.sec').textContent = sec // sec부분에 초 표시
+    }
+    const timeStart = function(timer){
+      setInterval(clock,1000);
+      clock();
+    }
+    timeStart();
+  </script>
+</body>
+</html>
