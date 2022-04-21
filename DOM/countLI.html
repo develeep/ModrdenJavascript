@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+  <ul>
+    <li>Animals
+      <ul>
+        <li>Mammals
+          <ul>
+            <li>Cows</li>
+            <li>Donkeys</li>
+            <li>Dogs</li>
+            <li>Tigers</li>
+          </ul>
+        </li>
+        <li>Other
+          <ul>
+            <li>Snakes</li>
+            <li>Birds</li>
+            <li>Lizards</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Fishes
+      <ul>
+        <li>Aquarium
+          <ul>
+            <li>Guppy</li>
+            <li>Angelfish</li>
+          </ul>
+        </li>
+        <li>Sea
+          <ul>
+            <li>Sea trout</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <script>
+    // ... 여기에 코드를 작성하세요. ...
+    const lis = document.querySelectorAll('li')
+    for(let li of lis){
+      console.log(li.innerText)
+      let count = li.querySelectorAll('li').length
+      if(!count)continue
+      console.log(li.firstChild)
+      li.firstChild.data += `[${count}]`;
+    }
+  </script>
+
+</body>
+</html>
