@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>toggle</title>
+  <style>
+    .hide {
+      display: none;
+    }
+    
+  </style>
+</head>
+<body>
+  <button id="btn">click</button>
+  <p>HI</p>
+  <script>
+    const btn = document.querySelector('#btn')
+    
+    btn.addEventListener('click',()=>{
+      const text = document.querySelector('p')
+      text.classList.toggle('hide')
+    })
+  </script>
+</body>
+</html>
