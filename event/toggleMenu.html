@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    .btn:hover {
+        cursor: pointer;
+    }
+    ul {
+      margin: 0;
+      list-style: none;
+      padding-left: 42px;
+      
+    }
+    .hide {
+      display:none
+    }
+    li {
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <span class="btn">▶ ▼ Sweeties (click me)!</span>
+  <ul class="hide">
+    <li>Cake</li>
+    <li>Donut</li>
+    <li>Honey</li>
+  </ul>
+  <script>
+    const btn = document.querySelector('.btn')
+    const ul = document.querySelector('ul')
+    btn.addEventListener('click',()=>{ul.classList.toggle('hide')})
+  </script>
+</body>
+</html>
