@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <select id="genres">
+    <option value="rock">Rock</option>
+    <option value="blues" selected>Blues</option>
+  </select>
+  <script>
+    // 선택한 옵션의 값과 텍스트 표시하세요
+    const genres = document.querySelector('#genres')
+    console.log(genres.value)
+    // <option value="classic">Classic</option>라는 옵션을 추가하세요.
+    const newOption = new Option("Classic","classic")
+    genres.append(newOption)
+    // 추가한 옵션을 선택하세요
+    newOption.selected = true
+  </script>
+</body>
+</html>
